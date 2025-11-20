@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSQUARE | Money Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Space Grotesk"', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                orange: '#F38020', // Cloudflare Orange
+                dark: '#1D1D1D',
+                light: '#F4F4F5',
+                accent: '#A78BFA', // Purple for contrast
+                green: '#4ADE80',
+                red: '#F87171'
+              }
+            },
+            boxShadow: {
+              'neo': '4px 4px 0px 0px #1D1D1D',
+              'neo-sm': '2px 2px 0px 0px #1D1D1D',
+              'neo-lg': '8px 8px 0px 0px #1D1D1D',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #FDFBF7;
+        color: #1D1D1D;
+      }
+      /* Custom Scrollbar for Brutalist feel */
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #fff;
+        border-left: 2px solid #000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #F38020;
+        border: 2px solid #000;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #1D1D1D;
+      }
+      
+      /* Date Picker Styles */
+      input[type="date"] {
+        cursor: pointer;
+      }
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        cursor: pointer;
+        filter: invert(0);
+        opacity: 0.8;
+        width: 24px;
+        height: 24px;
+        transition: transform 0.1s;
+      }
+      input[type="date"]::-webkit-calendar-picker-indicator:hover {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "tailwind-merge": "https://aistudiocdn.com/tailwind-merge@^3.4.0",
+    "clsx": "https://aistudiocdn.com/clsx@^2.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

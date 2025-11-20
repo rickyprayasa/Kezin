@@ -1,0 +1,7 @@
+{
+  "name": "TRESO",
+  "description": "Neo-Brutalist SaaS for money management with AI analysis and collaborative features.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
