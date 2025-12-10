@@ -1,0 +1,32 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <circle cx="100" cy="100" r="100" fill="#1A1A2E"/>
+
+  <!-- Fire base -->
+  <ellipse cx="100" cy="150" rx="40" ry="20" fill="#8B4513" opacity="0.7"/>
+
+  <!-- Fire body (multiple layers) -->
+  <path d="M 70 140 Q 60 110 70 80 Q 75 100 80 80 Q 85 100 90 70 Q 95 90 100 60 Q 105 90 110 70 Q 115 100 120 80 Q 125 100 130 80 Q 140 110 130 140 Z" fill="#FF6B35"/>
+  <path d="M 75 135 Q 70 115 75 95 Q 80 110 85 90 Q 90 105 100 75 Q 110 105 115 90 Q 120 110 125 95 Q 130 115 125 135 Z" fill="#FF8C42"/>
+  <path d="M 80 130 Q 78 115 82 100 Q 88 110 95 95 Q 100 105 100 85 Q 100 105 105 95 Q 112 110 118 100 Q 122 115 120 130 Z" fill="#FFA500"/>
+  <path d="M 85 125 Q 85 115 90 105 Q 95 115 100 100 Q 105 115 110 105 Q 115 115 115 125 Z" fill="#FFD700"/>
+
+  <!-- Face -->
+  <circle cx="100" cy="110" r="28" fill="#FFD700"/>
+
+  <!-- Eyes -->
+  <ellipse cx="90" cy="105" rx="8" ry="10" fill="white"/>
+  <ellipse cx="110" cy="105" rx="8" ry="10" fill="white"/>
+  <circle cx="90" cy="107" r="5" fill="#1A1A1A"/>
+  <circle cx="110" cy="107" r="5" fill="#1A1A1A"/>
+  <circle cx="92" cy="105" r="2" fill="white"/>
+  <circle cx="112" cy="105" r="2" fill="white"/>
+
+  <!-- Mouth -->
+  <path d="M 85 120 Q 100 127 115 120" stroke="#FF6B35" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Sparkles -->
+  <circle cx="135" cy="75" r="3" fill="#FFD700"/>
+  <circle cx="65" cy="85" r="2" fill="#FFA500"/>
+  <circle cx="140" cy="100" r="2" fill="#FFD700"/>
+</svg>

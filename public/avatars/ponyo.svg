@@ -1,0 +1,35 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <circle cx="100" cy="100" r="100" fill="#FFB6C1"/>
+
+  <!-- Fish body -->
+  <ellipse cx="100" cy="110" rx="55" ry="45" fill="#FF6B9D"/>
+
+  <!-- Head -->
+  <circle cx="100" cy="85" r="42" fill="#FFB6C1"/>
+
+  <!-- Hair/Fins -->
+  <ellipse cx="70" cy="65" rx="15" ry="20" fill="#FF6B9D"/>
+  <ellipse cx="90" cy="60" rx="15" ry="22" fill="#FF6B9D"/>
+  <ellipse cx="110" cy="60" rx="15" ry="22" fill="#FF6B9D"/>
+  <ellipse cx="130" cy="65" rx="15" ry="20" fill="#FF6B9D"/>
+
+  <!-- Eyes -->
+  <circle cx="88" cy="80" r="10" fill="white"/>
+  <circle cx="112" cy="80" r="10" fill="white"/>
+  <circle cx="90" cy="82" r="7" fill="#2C1810"/>
+  <circle cx="114" cy="82" r="7" fill="#2C1810"/>
+  <circle cx="92" cy="79" r="3" fill="white"/>
+  <circle cx="116" cy="79" r="3" fill="white"/>
+
+  <!-- Mouth -->
+  <path d="M 85 95 Q 100 102 115 95" stroke="#FF1493" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Cheeks -->
+  <ellipse cx="70" cy="92" rx="8" ry="6" fill="#FF69B4" opacity="0.5"/>
+  <ellipse cx="130" cy="92" rx="8" ry="6" fill="#FF69B4" opacity="0.5"/>
+
+  <!-- Side fins -->
+  <ellipse cx="50" cy="110" rx="12" ry="18" fill="#FF8FA3"/>
+  <ellipse cx="150" cy="110" rx="12" ry="18" fill="#FF8FA3"/>
+</svg>

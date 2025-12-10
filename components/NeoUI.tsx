@@ -7,7 +7,6 @@ import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import { X, Calendar as CalendarIcon, ChevronLeft, ChevronRight, AlertTriangle } from 'lucide-react';
 
-// Utility for Tailwind classes
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
@@ -118,11 +117,16 @@ export const NeoDatePicker: React.FC<{
   placeholder?: string;
   className?: string;
   required?: boolean;
-}> = ({ value, onChange, label, className, placeholder, required }) => {
+}> = ({ value, onChange, className, placeholder }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [viewDate, setViewDate] = useState(() => value ? new Date(value) : new Date());
   const containerRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ top: 0, left: 0, width: 300 }); 
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (value) setViewDate(new Date(value));
@@ -183,7 +187,7 @@ export const NeoDatePicker: React.FC<{
             <CalendarIcon className="w-5 h-5" />
         </div>
 
-        {isOpen && createPortal(
+        {mounted && isOpen && createPortal(
             <div 
                 className="fixed inset-0 z-[9998]" 
                 onClick={() => setIsOpen(false)}
@@ -204,8 +208,8 @@ export const NeoDatePicker: React.FC<{
                     </div>
 
                     <div className="grid grid-cols-7 mb-2 gap-1">
-                        {['S','M','T','W','T','F','S'].map(d => (
-                            <div key={d} className="text-center text-xs font-black text-gray-400 h-8 flex items-center justify-center">{d}</div>
+                        {['S','M','T','W','T','F','S'].map((d, i) => (
+                            <div key={`${d}-${i}`} className="text-center text-xs font-black text-gray-400 h-8 flex items-center justify-center">{d}</div>
                         ))}
                     </div>
 
@@ -309,10 +313,6 @@ export const NeoDialog: React.FC<NeoDialogProps> = ({ isOpen, onClose, title, ch
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
-    } else {
-      // Only remove if there isn't another dialog open below it
-      // For simplicity in this app, we can just clear it
-      // but ideally we'd track open dialog count
     }
     return () => {
        document.body.style.overflow = '';
@@ -425,24 +425,31 @@ export const NeoTabs: React.FC<NeoTabsProps> = ({ tabs, active, onChange }) => {
     );
 }
 
-export const AppLogo: React.FC<{ className?: string }> = ({ className }) => {
+export const AppLogo: React.FC<{ className?: string; size?: 'sm' | 'md' | 'lg' }> = ({ className, size = 'md' }) => {
+    const sizeClasses = {
+        sm: 'w-8 h-8',
+        md: 'w-10 h-10',
+        lg: 'w-14 h-14'
+    };
+    const innerSizeClasses = {
+        sm: 'w-4 h-4 text-[6px]',
+        md: 'w-5 h-5 text-[8px]',
+        lg: 'w-7 h-7 text-[10px]'
+    };
     return (
         <motion.div 
-            className={cn("relative w-10 h-10 bg-brand-orange border-2 border-black shadow-neo-sm flex items-center justify-center cursor-pointer group overflow-hidden", className)}
+            className={cn("relative bg-brand-orange border-2 border-black shadow-neo-sm flex items-center justify-center cursor-pointer group overflow-hidden", sizeClasses[size], className)}
             whileHover={{ scale: 1.05 }}
         >
-            {/* Bank Columns Background */}
             <div className="absolute bottom-0 left-0 right-0 h-4 flex justify-around items-end px-1">
                 <div className="w-1 h-3 bg-black/20"></div>
                 <div className="w-1 h-3 bg-black/20"></div>
                 <div className="w-1 h-3 bg-black/20"></div>
             </div>
-            {/* Roof */}
             <div className="absolute top-1 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[6px] border-b-black/20"></div>
             
-            {/* Floating Coin */}
             <motion.div 
-                className="relative z-10 w-5 h-5 rounded-full bg-white border-2 border-black flex items-center justify-center text-[8px] font-black"
+                className={cn("relative z-10 rounded-full bg-white border-2 border-black flex items-center justify-center font-black", innerSizeClasses[size])}
                 initial={{ y: 0 }}
                 whileHover={{ y: [0, -4, 0], rotate: 360 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}

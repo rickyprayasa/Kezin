@@ -1,0 +1,38 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <circle cx="100" cy="100" r="100" fill="#87CEEB"/>
+
+  <!-- Totoro Body -->
+  <ellipse cx="100" cy="120" rx="60" ry="70" fill="#7D7D7D"/>
+
+  <!-- Belly -->
+  <ellipse cx="100" cy="130" rx="45" ry="50" fill="#E6E6E6"/>
+  <path d="M 70 110 Q 100 140 130 110" stroke="#A0A0A0" stroke-width="2" fill="none"/>
+  <path d="M 70 125 Q 100 150 130 125" stroke="#A0A0A0" stroke-width="2" fill="none"/>
+
+  <!-- Head -->
+  <circle cx="100" cy="80" r="45" fill="#7D7D7D"/>
+
+  <!-- Ears -->
+  <ellipse cx="70" cy="50" rx="12" ry="25" fill="#6B6B6B"/>
+  <ellipse cx="130" cy="50" rx="12" ry="25" fill="#6B6B6B"/>
+
+  <!-- Eyes -->
+  <ellipse cx="85" cy="75" rx="12" ry="15" fill="white"/>
+  <ellipse cx="115" cy="75" rx="12" ry="15" fill="white"/>
+  <circle cx="85" cy="77" r="8" fill="black"/>
+  <circle cx="115" cy="77" r="8" fill="black"/>
+  <circle cx="87" cy="74" r="3" fill="white"/>
+  <circle cx="117" cy="74" r="3" fill="white"/>
+
+  <!-- Nose -->
+  <polygon points="100,85 95,95 105,95" fill="#4A4A4A"/>
+
+  <!-- Whiskers -->
+  <line x1="50" y1="85" x2="70" y2="83" stroke="#4A4A4A" stroke-width="2"/>
+  <line x1="50" y1="90" x2="70" y2="90" stroke="#4A4A4A" stroke-width="2"/>
+  <line x1="50" y1="95" x2="70" y2="97" stroke="#4A4A4A" stroke-width="2"/>
+  <line x1="150" y1="85" x2="130" y2="83" stroke="#4A4A4A" stroke-width="2"/>
+  <line x1="150" y1="90" x2="130" y2="90" stroke="#4A4A4A" stroke-width="2"/>
+  <line x1="150" y1="95" x2="130" y2="97" stroke="#4A4A4A" stroke-width="2"/>
+</svg>

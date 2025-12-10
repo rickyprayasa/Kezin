@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --theme-primary: #F38020;
+  --theme-light: #FFF5F0;
+  --theme-medium: #FFE5D9;
+  --theme-dark: #CC5629;
+}
+
+body {
+  background: linear-gradient(135deg, var(--theme-light) 0%, #FDFBF7 50%, var(--theme-medium) 100%);
+  min-height: 100vh;
+  transition: background 0.5s ease;
+  color: #1D1D1D;
+}
+
+/* Custom Scrollbar for Brutalist feel */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+  border-left: 2px solid #000;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--theme-primary);
+  border: 2px solid #000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1D1D1D;
+}
+
+/* Date Picker Styles */
+input[type="date"] {
+  cursor: pointer;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: invert(0);
+  opacity: 0.8;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.1s;
+}
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Cards with subtle theme background */
+.theme-card {
+  background: linear-gradient(to bottom right, white 0%, var(--theme-light) 100%);
+}
+
+/* Transaction cards */
+.theme-income-bg {
+  background: linear-gradient(135deg, #F0FFF4 0%, white 100%);
+}
+
+.theme-expense-bg {
+  background: linear-gradient(135deg, #FFF5F5 0%, white 100%);
+}
+
+/* Header gradient */
+.theme-header {
+  background: linear-gradient(90deg, var(--theme-primary) 0%, var(--theme-dark) 100%);
+}
+
+/* Custom scrollbar for AI Insights */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f3e8ff;
+  border: 1px solid #c084fc;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #9333ea;
+  border: 1px solid #1D1D1D;
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #7e22ce;
+}
+
+/* Landing Page Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(243, 128, 32, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(243, 128, 32, 0.6); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 1s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Landing page specific styles */
+.landing-hero-gradient {
+  background: linear-gradient(135deg, #FFF5F0 0%, #FDFBF7 25%, #FFE5D9 50%, #F8F3FB 75%, #F0FFF4 100%);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* Glass effect for nav */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Text gradient */
+.text-gradient {
+  background: linear-gradient(135deg, #F38020 0%, #A78BFA 50%, #4ADE80 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Marquee animation for testimonials */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Hover lift effect */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 8px 8px 0px 0px #1D1D1D;
+}

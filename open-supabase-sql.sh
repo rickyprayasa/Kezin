@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "======================================"
+echo "OPENING SUPABASE SQL EDITOR"
+echo "======================================"
+echo ""
+echo "Please run the following SQL file:"
+echo "supabase/COMPREHENSIVE-FIX-PROFILES.sql"
+echo ""
+echo "Opening Supabase project..."
+xdg-open "https://supabase.com/dashboard/project/_/sql/new" 2>/dev/null || echo "Please open: https://supabase.com/dashboard/project/_/sql/new"
+echo ""
+echo "Then copy and paste the SQL from:"
+echo "$(pwd)/supabase/COMPREHENSIVE-FIX-PROFILES.sql"
